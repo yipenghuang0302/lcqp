@@ -1,0 +1,23 @@
+LP linear programming
+	simplex method
+	karmarkar’s method
+QP unconstrained quadratic programming
+	equivalent to solving system of linear equations
+	requires Q matrix to be SPD for convergence
+	efficiently solved using conjugate gradient and successive over-relaxation
+	hcdc can solve using block cyclic coordinate descent
+	symbolically find the partial derivative with respect to four chosen variables
+	requires four integrators, 16 multipliers in the worst case
+LCQP linearly constrained quadratic programming
+	integrator saturation will be set to the active set constraint
+QCQP quadratically constrained quadratic programming
+	maps from linear quadratic control
+	quadratic constraints would be harder to imitate in hcdc
+	if using the barrier function approach with a logarithmic barrier, can use hybrid loop
+	linear system dynamics with a goal state constraint results in qcqp
+	has applications in predictive model control or receding horizon control
+	ideally, the analog circuitry should be used to model forward dynamics
+	but in optimal control, the set of all future control decisions are variables to optimize
+	and forward dynamics is modeled as constrains relating discrete steps
+SOCP second order cone programming
+	the next logical superset

@@ -61,7 +61,7 @@ int conjugate_solver (
 		// printf("step = %d\n",step++);
 	} while (
 		delta_new>DBL_EPSILON*delta_0
-		&& step<(1<<20)
+		&& step<(1<<16)
 	);
 
 	for (row=0; row<n; row++) {
