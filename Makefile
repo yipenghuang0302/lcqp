@@ -1,7 +1,8 @@
 CC=g++
 CFLAGS=-Wall -Wextra -O3 -ftree-vectorize -msse3
 LDFLAGS=
-SOURCES=linear_solver/blas/blas.c linear_solver/conjugate_solver.c working_set.cpp eq_con_lcqp.cpp lcqp.cpp quadprog/src/QuadProg++.cc main.cpp
+SOURCES=linear_solver/blas/blas.c linear_solver/conjugate_solver.c working_set.cpp eq_con_lcqp.cpp lcqp.cpp main.cpp
+# quadprog/src/QuadProg++.cc
 OBJECTS=$(SOURCES:.c=.o)
 EXECUTABLE=test
 
